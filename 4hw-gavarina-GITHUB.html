@@ -13130,7 +13130,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -13172,7 +13172,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lamb</span> <span class="o">=</span> <span class="mi">3</span>
@@ -13205,7 +13205,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Закон распределения Рэлея</span>
@@ -13231,7 +13231,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sigma</span> <span class="o">=</span> <span class="mi">3</span>
@@ -13257,7 +13257,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -13292,7 +13292,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">show_emp</span><span class="p">(</span><span class="n">distrs</span><span class="p">,</span> <span class="n">is_discr</span><span class="p">):</span>
@@ -13329,7 +13329,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.1.-&#1050;&#1088;&#1080;&#1090;&#1077;&#1088;&#1080;&#1081;-&#1093;&#1080;-&#1082;&#1074;&#1072;&#1076;&#1088;&#1072;&#1090;-&#1050;.-&#1055;&#1080;&#1088;&#1089;&#1086;&#1085;&#1072;">1.1. &#1050;&#1088;&#1080;&#1090;&#1077;&#1088;&#1080;&#1081; &#1093;&#1080;-&#1082;&#1074;&#1072;&#1076;&#1088;&#1072;&#1090; &#1050;. &#1055;&#1080;&#1088;&#1089;&#1086;&#1085;&#1072;<a class="anchor-link" href="#1.1.-&#1050;&#1088;&#1080;&#1090;&#1077;&#1088;&#1080;&#1081;-&#1093;&#1080;-&#1082;&#1074;&#1072;&#1076;&#1088;&#1072;&#1090;-&#1050;.-&#1055;&#1080;&#1088;&#1089;&#1086;&#1085;&#1072;">&#182;</a></h3><p>Критерий хи-квадрат считается одним из самых универсальных методов проверки статистических гипотез. В качестве <strong>меры отклонения</strong> эмпирических данных от гипотетических берется величина $\chi^2 = \sum\limits_{i=1}^N \dfrac{(v_i - np_i)^2}{np_i},\;\; v=(v_1\dots v_N) $ -- вектор частот, полученный из выборки, $p=(p_1 \dots p_N)$ -- заданный вероятностный вектор, рассчитанный по предполагаемому распределению, наблюдаемая величина $\xi$ принимает значения от 1 до $N$ (для дискретных величин). Выборка разбивается на N интервалов.</p>
-<p>Данная статистика при $n\rightarrow \infty$ имеет $\chi^2$-распределение с $k=N-r-1$, где $r$ -- число параметров распределения, $N$ -- число интервалов (после объединения, см. далее). Это накладывает ограничение на объем выборки при использовании данного критерия: при разбиении ее на интервалы в каждом должно быть не менее 5 величин, в противном случае интервалы объединяются. Однако для выборок очень малых объемов (например, 10) это бессмысленно: в каждом интервале соль мало величин, что для достижения пяти штук в каждом придется объединять их в 1-2 интервала. Следовательно, k будет принимать в том числе отрицательные значения, что невозможно.</p>
+<p>Данная статистика при $n\rightarrow \infty$ имеет $\chi^2$-распределение с $k=N-r-1$ (для сложных гипотез) или $k=N-1$ (для простых), где $r$ -- число параметров распределения, $N$ -- число интервалов (после объединения, см. далее). Это накладывает ограничение на объем выборки при использовании данного критерия: при разбиении ее на интервалы в каждом должно быть не менее 5 величин, в противном случае интервалы объединяются. Однако для выборок очень малых объемов (например, 10) это бессмысленно: в каждом интервале соль мало величин, что для достижения пяти штук в каждом придется объединять их в 1-2 интервала. Следовательно, k будет принимать в том числе отрицательные значения, что невозможно.</p>
 <blockquote><p>Число интервалов будем искать по формуле Старджесса: $N = \log_2{n} + 1$ для непрерывного распределения. Для дискретного примем N за максимальный элемент выборки.</p>
 </blockquote>
 <p>Для выбранного уровня значимости по таблице распределения $\chi^2$ находится критическое значение $\chi^2_{\alpha; k}$. Если $\chi^2 &gt; \chi^2_{\alpha;k}$, то принятая гипотеза $H_0$ отвергается, в противном случае принимается.</p>
@@ -13341,7 +13341,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -13376,25 +13376,6 @@ div#notebook {
             <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">F_Rayl</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">par</span><span class="p">)</span> <span class="o">-</span> <span class="n">F_Rayl</span><span class="p">(</span><span class="n">prev_i</span><span class="p">,</span> <span class="n">par</span><span class="p">))</span>
             <span class="n">prev_i</span> <span class="o">=</span> <span class="n">i</span>
     <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">v</span>
- 
-<span class="k">def</span> <span class="nf">correct_p_v</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Функция корректирует вектора p и v: если частота в интервале &lt; 5, объединяем интервал с предыдущим|следующим.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-<span class="c1">#     print(&#39;Кол-во первичных интервалов&#39;, len(v))</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)):</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="ow">and</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-<span class="c1">#             print(v)</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
-                <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-                <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-                <span class="k">del</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-                <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-                <span class="k">del</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="c1">#     print(&#39;Интервалов после объединения:&#39;, len(v))</span>
-    <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">v</span>
 
 <span class="k">def</span> <span class="nf">chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="n">is_discr</span><span class="p">,</span> <span class="n">par</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;Функция вычисляет значение хи-квадрат, возвращает кол-во интервалов (нужно д/поиска квантилей)&#39;&#39;&#39;</span>
@@ -13414,16 +13395,16 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[180]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">hi2_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hi-2.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">print_chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="n">is_discr</span><span class="p">,</span> <span class="n">par</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">print_chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="n">is_discr</span><span class="p">,</span> <span class="n">par</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">is_simple</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">distr</span><span class="p">)</span>
     <span class="n">N</span><span class="p">,</span> <span class="n">chi</span> <span class="o">=</span> <span class="n">chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="n">is_discr</span><span class="p">,</span> <span class="n">par</span><span class="p">)</span>
-    <span class="n">k</span> <span class="o">=</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">is_simple</span> <span class="k">else</span> <span class="n">N</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span>
     <span class="n">chik</span> <span class="o">=</span> <span class="n">hi2_set</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">alpha</span><span class="p">)][</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;hi^2 = {np.round(chi, 3):6}, hi^2_k = {np.round(chik, 3):6}&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;=&gt; Т.к. hi^2 {&quot;≤&quot; if chi &lt;= chik else &quot;&gt;&quot;} hi^2k, гипотеза H0 {&quot;не&quot; if chi &gt; chik else &quot;  &quot;} принимается&#39;</span><span class="p">)</span>
@@ -13445,11 +13426,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">distrs_pois0</span><span class="o">=</span> <span class="p">[</span><span class="n">pois10</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pois100</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pois1500</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pois5000</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pois105</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-<span class="n">show_emp</span><span class="p">(</span><span class="n">distrs</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">show_emp</span><span class="p">(</span><span class="n">distrs_pois0</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13468,7 +13449,7 @@ div#notebook {
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -13491,7 +13472,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[181]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">alphas</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]</span>
@@ -13502,7 +13483,7 @@ div#notebook {
     <span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;------------------------------- Для alpha = </span><span class="si">{alpha:4}</span><span class="s1"> ------------------------------&#39;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">distr</span> <span class="ow">in</span> <span class="n">distrs</span><span class="p">:</span>
-            <span class="n">print_chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+            <span class="n">print_chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13522,73 +13503,73 @@ div#notebook {
 <pre>
 ========================== Для выборок объемом     10 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 =   2.51, hi^2_k =  9.236 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  6.626, hi^2_k =  9.236 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 17.454, hi^2_k =  7.779 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 = 41.691, hi^2_k = 13.362 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 =  5.601, hi^2_k =  7.779 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 16.117, hi^2_k = 13.362 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 =  2.576, hi^2_k =  9.236 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.262, hi^2_k = 10.645 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  4.577, hi^2_k = 12.017 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  2.733, hi^2_k = 10.645 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 =   2.51, hi^2_k =  11.07 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  6.626, hi^2_k =  11.07 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 17.454, hi^2_k =  9.488 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 = 41.691, hi^2_k = 15.507 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 =  5.601, hi^2_k =  9.488 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 16.117, hi^2_k = 15.507 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 =  2.576, hi^2_k =  11.07 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.262, hi^2_k = 12.592 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  4.577, hi^2_k = 14.067 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  2.733, hi^2_k = 12.592 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 
 ========================== Для выборок объемом    100 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 = 11.163, hi^2_k = 12.017 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  5.892, hi^2_k = 13.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 18.008, hi^2_k = 14.684 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 =  4.126, hi^2_k = 10.645 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  8.699, hi^2_k = 13.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  2.388, hi^2_k = 12.017 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 14.675, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 11.887, hi^2_k = 13.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 17.207, hi^2_k = 12.017 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 = 10.802, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 = 11.163, hi^2_k = 14.067 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  5.892, hi^2_k = 15.507 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 18.008, hi^2_k = 16.919 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 =  4.126, hi^2_k = 12.592 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  8.699, hi^2_k = 15.507 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  2.388, hi^2_k = 14.067 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 14.675, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 11.887, hi^2_k = 15.507 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 17.207, hi^2_k = 14.067 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 = 10.802, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 
 ========================== Для выборок объемом   1500 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 = 13.495, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.825, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =   9.49, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 17.658, hi^2_k = 17.275 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 = 15.381, hi^2_k = 14.684 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 =  10.21, hi^2_k = 17.275 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.146, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 13.476, hi^2_k = 17.275 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.275, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  3.483, hi^2_k = 13.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 = 13.495, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.825, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =   9.49, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 17.658, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 15.381, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  10.21, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.146, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 13.476, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.275, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  3.483, hi^2_k = 15.507 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 
 ========================== Для выборок объемом   5000 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 = 13.079, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  11.68, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  7.193, hi^2_k = 17.275 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =   7.58, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 12.152, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.665, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.092, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  7.716, hi^2_k = 17.275 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =   21.1, hi^2_k = 18.549 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 = 17.114, hi^2_k = 17.275 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 = 13.079, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  11.68, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  7.193, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =   7.58, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 12.152, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.665, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.092, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  7.716, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =   21.1, hi^2_k = 21.026 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 = 17.114, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 
 ========================== Для выборок объемом 100000 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 = 10.696, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 12.504, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 15.317, hi^2_k = 19.812 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 11.064, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 11.218, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 11.078, hi^2_k = 21.064 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  8.387, hi^2_k = 19.812 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  12.92, hi^2_k = 19.812 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.002, hi^2_k = 19.812 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 13.186, hi^2_k = 19.812 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 = 10.696, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 12.504, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 15.317, hi^2_k = 22.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 11.064, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 11.218, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 11.078, hi^2_k = 23.685 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  8.387, hi^2_k = 22.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  12.92, hi^2_k = 22.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.002, hi^2_k = 22.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 13.186, hi^2_k = 22.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 </pre>
 </div>
 </div>
@@ -13596,13 +13577,6 @@ hi^2 = 11.218, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0 
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#1048;&#1079;&#1084;&#1077;&#1085;&#1080;&#1074;-&#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1103;&#1077;&#1084;&#1099;&#1081;-&#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;-&#1085;&#1072;-&#1079;&#1072;&#1074;&#1077;&#1076;&#1086;&#1084;&#1086;-&#1085;&#1077;&#1074;&#1077;&#1088;&#1085;&#1099;&#1081;-(&#1085;&#1072;&#1087;&#1088;&#1080;&#1084;&#1077;&#1088;,-3.5),-&#1084;&#1086;&#1078;&#1085;&#1086;-&#1079;&#1072;&#1084;&#1077;&#1090;&#1080;&#1090;&#1100;,-&#1095;&#1090;&#1086;-&#1085;&#1072;-&#1074;&#1099;&#1073;&#1086;&#1088;&#1082;&#1072;&#1093;-&#1084;&#1072;&#1083;&#1099;&#1093;-&#1086;&#1073;&#1098;&#1077;&#1084;&#1086;&#1074;-&#1082;&#1088;&#1080;&#1090;&#1077;&#1088;&#1080;&#1081;-&#1076;&#1072;&#1077;&#1090;-&#1087;&#1088;&#1086;&#1090;&#1080;&#1074;&#1086;&#1088;&#1077;&#1095;&#1080;&#1074;&#1099;&#1077;-&#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1099;,-&#1086;&#1076;&#1085;&#1072;&#1082;&#1086;-&#1085;&#1072;-&#1073;&#1086;&#1083;&#1100;&#1096;&#1080;&#1093;-&#1074;&#1099;&#1073;&#1086;&#1088;&#1082;&#1072;&#1093;-&#1075;&#1080;&#1087;&#1086;&#1090;&#1077;&#1079;&#1072;-&#1086;&#1076;&#1085;&#1086;&#1079;&#1085;&#1072;&#1095;&#1085;&#1086;-&#1086;&#1090;&#1074;&#1077;&#1088;&#1075;&#1072;&#1077;&#1090;&#1089;&#1103;.">&#1048;&#1079;&#1084;&#1077;&#1085;&#1080;&#1074; &#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1103;&#1077;&#1084;&#1099;&#1081; &#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088; &#1085;&#1072; &#1079;&#1072;&#1074;&#1077;&#1076;&#1086;&#1084;&#1086; &#1085;&#1077;&#1074;&#1077;&#1088;&#1085;&#1099;&#1081; (&#1085;&#1072;&#1087;&#1088;&#1080;&#1084;&#1077;&#1088;, 3.5), &#1084;&#1086;&#1078;&#1085;&#1086; &#1079;&#1072;&#1084;&#1077;&#1090;&#1080;&#1090;&#1100;, &#1095;&#1090;&#1086; &#1085;&#1072; &#1074;&#1099;&#1073;&#1086;&#1088;&#1082;&#1072;&#1093; &#1084;&#1072;&#1083;&#1099;&#1093; &#1086;&#1073;&#1098;&#1077;&#1084;&#1086;&#1074; &#1082;&#1088;&#1080;&#1090;&#1077;&#1088;&#1080;&#1081; &#1076;&#1072;&#1077;&#1090; &#1087;&#1088;&#1086;&#1090;&#1080;&#1074;&#1086;&#1088;&#1077;&#1095;&#1080;&#1074;&#1099;&#1077; &#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1099;, &#1086;&#1076;&#1085;&#1072;&#1082;&#1086; &#1085;&#1072; &#1073;&#1086;&#1083;&#1100;&#1096;&#1080;&#1093; &#1074;&#1099;&#1073;&#1086;&#1088;&#1082;&#1072;&#1093; &#1075;&#1080;&#1087;&#1086;&#1090;&#1077;&#1079;&#1072; &#1086;&#1076;&#1085;&#1086;&#1079;&#1085;&#1072;&#1095;&#1085;&#1086; &#1086;&#1090;&#1074;&#1077;&#1088;&#1075;&#1072;&#1077;&#1090;&#1089;&#1103;.<a class="anchor-link" href="#&#1048;&#1079;&#1084;&#1077;&#1085;&#1080;&#1074;-&#1087;&#1088;&#1086;&#1074;&#1077;&#1088;&#1103;&#1077;&#1084;&#1099;&#1081;-&#1087;&#1072;&#1088;&#1072;&#1084;&#1077;&#1090;&#1088;-&#1085;&#1072;-&#1079;&#1072;&#1074;&#1077;&#1076;&#1086;&#1084;&#1086;-&#1085;&#1077;&#1074;&#1077;&#1088;&#1085;&#1099;&#1081;-(&#1085;&#1072;&#1087;&#1088;&#1080;&#1084;&#1077;&#1088;,-3.5),-&#1084;&#1086;&#1078;&#1085;&#1086;-&#1079;&#1072;&#1084;&#1077;&#1090;&#1080;&#1090;&#1100;,-&#1095;&#1090;&#1086;-&#1085;&#1072;-&#1074;&#1099;&#1073;&#1086;&#1088;&#1082;&#1072;&#1093;-&#1084;&#1072;&#1083;&#1099;&#1093;-&#1086;&#1073;&#1098;&#1077;&#1084;&#1086;&#1074;-&#1082;&#1088;&#1080;&#1090;&#1077;&#1088;&#1080;&#1081;-&#1076;&#1072;&#1077;&#1090;-&#1087;&#1088;&#1086;&#1090;&#1080;&#1074;&#1086;&#1088;&#1077;&#1095;&#1080;&#1074;&#1099;&#1077;-&#1088;&#1077;&#1079;&#1091;&#1083;&#1100;&#1090;&#1072;&#1090;&#1099;,-&#1086;&#1076;&#1085;&#1072;&#1082;&#1086;-&#1085;&#1072;-&#1073;&#1086;&#1083;&#1100;&#1096;&#1080;&#1093;-&#1074;&#1099;&#1073;&#1086;&#1088;&#1082;&#1072;&#1093;-&#1075;&#1080;&#1087;&#1086;&#1090;&#1077;&#1079;&#1072;-&#1086;&#1076;&#1085;&#1086;&#1079;&#1085;&#1072;&#1095;&#1085;&#1086;-&#1086;&#1090;&#1074;&#1077;&#1088;&#1075;&#1072;&#1077;&#1090;&#1089;&#1103;.">&#182;</a></h4>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13619,7 +13593,7 @@ hi^2 = 11.218, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13629,7 +13603,7 @@ hi^2 = 11.218, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0 
     <span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;------------------------------- Для alpha = </span><span class="si">{alpha:4}</span><span class="s1"> ------------------------------&#39;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">distr</span> <span class="ow">in</span> <span class="n">distrs</span><span class="p">:</span>
-            <span class="n">print_chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">distr</span><span class="p">),</span> <span class="n">alpha</span><span class="p">)</span>
+            <span class="n">print_chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">distr</span><span class="p">),</span> <span class="n">alpha</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13649,73 +13623,118 @@ hi^2 = 11.218, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0 
 <pre>
 ========================== Для выборок объемом     10 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 =  2.704, hi^2_k =  9.236 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =   5.89, hi^2_k =  9.236 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.345, hi^2_k =  7.779 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 = 13.381, hi^2_k = 13.362 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 =  3.162, hi^2_k =  7.779 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =   9.25, hi^2_k = 12.017 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  2.514, hi^2_k =  7.779 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  6.163, hi^2_k =  9.236 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.014, hi^2_k = 10.645 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  3.136, hi^2_k =  9.236 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 =  2.704, hi^2_k =  11.07 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =   5.89, hi^2_k =  11.07 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.345, hi^2_k =  9.488 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 13.381, hi^2_k = 15.507 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  3.162, hi^2_k =  9.488 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =   9.25, hi^2_k = 14.067 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  2.514, hi^2_k =  9.488 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  6.163, hi^2_k =  11.07 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.014, hi^2_k = 12.592 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  3.136, hi^2_k =  11.07 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 
 ========================== Для выборок объемом    100 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 = 11.066, hi^2_k = 12.017 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  5.743, hi^2_k = 13.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 16.641, hi^2_k = 14.684 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 =  1.795, hi^2_k = 10.645 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =   8.79, hi^2_k = 13.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  2.518, hi^2_k = 10.645 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 11.458, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 11.479, hi^2_k = 12.017 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  17.91, hi^2_k = 10.645 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 = 10.952, hi^2_k = 13.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 = 11.066, hi^2_k = 14.067 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  5.743, hi^2_k = 15.507 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 16.641, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  1.795, hi^2_k = 12.592 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =   8.79, hi^2_k = 15.507 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  2.518, hi^2_k = 12.592 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 11.458, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 11.479, hi^2_k = 14.067 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  17.91, hi^2_k = 12.592 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 = 10.952, hi^2_k = 15.507 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 
 ========================== Для выборок объемом   1500 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 =  13.57, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.293, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.549, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 18.248, hi^2_k = 17.275 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
-hi^2 = 15.553, hi^2_k = 14.684 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 = 10.299, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.138, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 13.676, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.135, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =   2.54, hi^2_k = 12.017 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 =  13.57, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.293, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.549, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 18.248, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 15.553, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 10.299, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.138, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 13.676, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.135, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =   2.54, hi^2_k = 14.067 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 
 ========================== Для выборок объемом   5000 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 = 10.515, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  8.433, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  7.193, hi^2_k = 17.275 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  6.663, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 12.041, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.332, hi^2_k = 14.684 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  8.403, hi^2_k = 17.275 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  7.708, hi^2_k = 15.987 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 18.851, hi^2_k = 17.275 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+hi^2 = 16.515, hi^2_k = 15.987 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 = 10.515, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  8.433, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  7.193, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  6.663, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 12.041, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  5.332, hi^2_k = 16.919 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  8.403, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  7.708, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 18.851, hi^2_k = 19.675 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 16.515, hi^2_k = 18.307 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 
 ========================== Для выборок объемом 100000 =========================
 ------------------------------- Для alpha =  0.1 ------------------------------
-hi^2 =  10.69, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 10.458, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 14.842, hi^2_k = 19.812 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.312, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 11.087, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.149, hi^2_k = 19.812 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  8.335, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  12.73, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  6.749, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 13.071, hi^2_k = 18.549 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
 ------------------------------- Для alpha = 0.05 ------------------------------
-hi^2 =  10.69, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 10.458, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 14.842, hi^2_k = 22.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 =  9.312, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
-hi^2 = 11.087, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  9.149, hi^2_k = 22.362 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  8.335, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  12.73, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 =  6.749, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+hi^2 = 13.071, hi^2_k = 21.026 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Изменив проверяемый параметр на заведомо неверный (например, 3.1), можно заметить, что на выборках небольших объемов критерий дает противоречивые результаты, однако на больших выборках гипотеза однозначно отвергается:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">distr</span> <span class="ow">in</span> <span class="n">distrs_pois0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;n = {len(distr):6}. &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">print_chi2</span><span class="p">(</span><span class="n">distr</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>n =     10. hi^2 = 14.145, hi^2_k = 12.017 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+n =    100. hi^2 =  2.644, hi^2_k = 10.645 =&gt; Т.к. hi^2 ≤ hi^2k, гипотеза H0    принимается
+n =   1500. hi^2 = 16.226, hi^2_k = 15.987 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+n =   5000. hi^2 = 26.726, hi^2_k = 14.684 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
+n = 100000. hi^2 = 382.916, hi^2_k = 19.812 =&gt; Т.к. hi^2 &gt; hi^2k, гипотеза H0 не принимается
 </pre>
 </div>
 </div>
